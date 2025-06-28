@@ -9,10 +9,14 @@ export default function Home() {
     new Cliente('3', 'Carlos', 23),
   ];
 
+  function clienteSelecionado(cliente: Cliente) {
+
+  }
+
   return (
     <div className="flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-      <Layout titulo="app">
-        <Tabela clientes={clientes}></Tabela>
+      <Layout titulo="Cadastro com Firebase e Next.js">
+        <Tabela clientes={clientes} clienteSelecionado={clienteSelecionado}></Tabela>
       </Layout>
     </div>
   );
