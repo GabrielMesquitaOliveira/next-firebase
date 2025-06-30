@@ -1,7 +1,7 @@
+
 import React from "react";
 import Cliente from "@/core/Cliente";
 import { IconeEdicao, IconeLixo } from "./Icone";
-
 interface TabelaProps {
   clientes: Cliente[];
   clienteSelecionado?: (cliente: Cliente) => void;
@@ -32,7 +32,7 @@ function Tabela(props: TabelaProps) {
           </button>
         ) : false}
         {props.clienteExcluido ? (
-          <button
+          <button onClick={() => props.clienteExcluido?.(Cliente)}
             className="flex justify-center items-center text-red-600 hover:bg-purple-50 rounded-full p-2 m-1">
             {IconeLixo}
           </button>
