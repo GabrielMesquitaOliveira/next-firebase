@@ -1,9 +1,9 @@
 export default class Cliente {
-    #id: string | null
+    #id: string | undefined
     #nome: string
     #idade: number
 
-    constructor(id: string | null = null, nome: string, idade: number) {
+    constructor(id: string | undefined, nome: string, idade: number) {
         this.#id = id
         this.#nome = nome
         this.#idade = idade
@@ -13,7 +13,7 @@ export default class Cliente {
         return new Cliente('', '', 0)
     }
 
-    get Id(): string | null {
+    get Id(): string | undefined {
         return this.#id
     }
 
