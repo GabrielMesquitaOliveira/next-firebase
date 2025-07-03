@@ -15,7 +15,7 @@ export default function Formulario(props: FormularioProps) {
     const [idade, setIdade] = useState(props.cliente?.Idade ?? 0)
 
     return (
-        <div>
+        <div className="w-full">
             {id ? (
                 <Entrada
                     somenteLeitura
@@ -36,7 +36,7 @@ export default function Formulario(props: FormularioProps) {
                 valor={idade}
                 valorMudou={setIdade}
             />
-            <div className="flex justify-end mt-7">
+            <div className="flex justify-end mt-7 w-full">
                 <Botao cor="blue" className="mr-2"
                     onClick={() => props.clienteMudou?.(new Cliente(id, nome, +idade))}>
                     {id ? 'Alterar' : 'Salvar'}
